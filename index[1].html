@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BuildPulse | Sistema Comercial B2B que transforma investimento em vendas</title>
+<meta name="description" content="BuildPulse implementa tráfego + funil + CRM + time comercial para PMEs que faturam acima de R$50k/mês e querem previsibilidade. Diagnóstico 360º gratuito.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A0A0A;--surface:#111111;--border:rgba(255,255,255,0.08);--text:#FAFAFA;--muted:#A1A1AA;--dim:#71717A;--emerald:#10B981;--emerald-soft:rgba(16,185,129,0.12)}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text)}
+h1,h2,h3{font-family:Sora,sans-serif}
+</style>
+</head>
+<body class="bg-[#0A0A0A] text-white overflow-x-hidden antialiased">
+<div class="fixed inset-0 pointer-events-none"><div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(16,185,129,0.12),transparent_60%)]"></div><div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-emerald-500 blur-[150px] opacity-[0.06] rounded-full"></div></div>
+
+<header class="sticky top-0 z-50 border-b border-white/10 backdrop-blur-xl bg-black/70">
+<div class="mx-auto max-w-[1280px] px-6 h-[72px] flex items-center justify-between">
+<div class="flex items-center gap-3"><div class="h-8 w-8 rounded-[10px] bg-white text-black grid place-items-center font-black text-[13px]">B•</div><span class="font-bold tracking-tight">BuildPulse</span><span class="ml-2 hidden md:inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] uppercase tracking-widest text-zinc-400"><span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>Comercial B2B</span></div>
+<a href="#diagnostico" class="hidden md:inline-flex h-10 items-center gap-2 rounded-full bg-emerald-500 px-5 text-[13px] font-semibold text-black hover:bg-emerald-400 transition">Diagnóstico Comercial →</a>
+</div>
+</header>
+
+<section class="relative z-10 mx-auto max-w-[1280px] px-6 pt-16 md:pt-28 pb-16 grid lg:grid-cols-[1.1fr_0.9fr] gap-12">
+<div>
+<div class="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-1.5 text-[11px]"><span class="h-2 w-2 rounded-full bg-emerald-500"></span><span class="text-emerald-400 font-medium uppercase tracking-widest">Para empresas que faturam acima de R$50k/mês</span></div>
+<h1 class="mt-8 text-[36px] md:text-[58px] leading-[0.95] tracking-tight font-bold">Sua empresa não precisa de <br><span class="relative">mais leads.<span class="absolute bottom-2 left-0 right-0 h-3 bg-emerald-500/30 -rotate-1"></span></span><br>Precisa de um sistema que transforma investimento em vendas.</h1>
+<p class="mt-6 text-[16px] md:text-[18px] leading-[1.5] text-zinc-400 max-w-[560px]">A BuildPulse implementa o método que integra <b class="text-white">Tráfego, Funil, CRM e Time Comercial</b> para empresas que querem parar de apostar e começar a escalar com previsibilidade.</p>
+<div class="mt-8 flex flex-col sm:flex-row gap-4">
+<a href="#diagnostico" class="inline-flex h-[52px] items-center justify-center gap-2 rounded-full bg-emerald-500 px-8 font-semibold text-black hover:bg-emerald-400 transition shadow-[0_0_30px_rgba(16,185,129,0.35)]">Quero meu Diagnóstico 360º Gratuito →</a>
+<div class="flex items-center gap-3 text-[12px] text-zinc-500"><div class="flex -space-x-2"><div class="h-7 w-7 rounded-full bg-zinc-700 border-2 border-black"></div><div class="h-7 w-7 rounded-full bg-zinc-600 border-2 border-black"></div><div class="h-7 w-7 rounded-full bg-zinc-500 border-2 border-black"></div></div>Vagas limitadas: 5 diagnósticos/semana</div>
+</div>
+<div class="mt-10 grid grid-cols-3 gap-6 border-t border-white/10 pt-8 max-w-[520px]">
+<div><div class="text-[24px] font-bold">+R$12M</div><div class="text-[11px] text-zinc-500 uppercase tracking-wide">em receita gerenciada</div></div>
+<div><div class="text-[24px] font-bold">143</div><div class="text-[11px] text-zinc-500 uppercase tracking-wide">empresas aceleradas</div></div>
+<div><div class="text-[24px] font-bold">34%</div><div class="text-[11px] text-zinc-500 uppercase tracking-wide">aumento médio fechamento</div></div>
+</div>
+</div>
+
+<div id="diagnostico" class="rounded-[24px] border border-white/10 bg-[#111111] p-6 md:p-8 shadow-[0_20px_80px_rgba(0,0,0,0.5)]">
+<div id="form-card">
+<h3 class="font-bold text-[20px] leading-tight">Receba seu Diagnóstico Comercial 360º Gratuito</h3>
+<p class="mt-2 text-[13px] text-zinc-400">Analisamos sua conta de anúncios, funil e time comercial e entregamos um plano de 45 dias.</p>
+<form id="leadForm" class="mt-6 space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div><label class="text-[11px] uppercase tracking-wide text-zinc-500">Nome completo</label><input required name="nome" class="mt-2 w-full rounded-[12px] border border-white/10 bg-[#0A0A0A] px-4 py-3 text-[14px] outline-none focus:border-emerald-500" placeholder="Ex: Marcos Borba"></div>
+<div><label class="text-[11px] uppercase tracking-wide text-zinc-500">Empresa</label><input required name="empresa" class="mt-2 w-full rounded-[12px] border border-white/10 bg-[#0A0A0A] px-4 py-3 text-[14px] outline-none focus:border-emerald-500" placeholder="BuildPulse"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div><label class="text-[11px] uppercase tracking-wide text-zinc-500">Faturamento mensal</label><select required name="faturamento" class="mt-2 w-full rounded-[12px] border border-white/10 bg-[#0A0A0A] px-4 py-3 text-[14px]"><option value="">Selecione</option><option>Abaixo de R$30k</option><option>R$30k a R$50k</option><option>R$50k a R$100k</option><option>R$100k a R$300k</option><option>R$300k a R$1M</option><option>Acima de R$1M</option></select></div>
+<div><label class="text-[11px] uppercase tracking-wide text-zinc-500">Qtd vendedores</label><select required name="vendedores" class="mt-2 w-full rounded-[12px] border border-white/10 bg-[#0A0A0A] px-4 py-3 text-[14px]"><option value="">Selecione</option><option>Só eu (dono)</option><option>1-2</option><option>3-5</option><option>6-15</option><option>15+</option></select></div>
+</div>
+<div><label class="text-[11px] uppercase tracking-wide text-zinc-500">WhatsApp</label><input required name="whatsapp" class="mt-2 w-full rounded-[12px] border border-white/10 bg-[#0A0A0A] px-4 py-3 text-[14px]" placeholder="(47) 9xxxx-xxxx"></div>
+<div><label class="text-[11px] uppercase tracking-wide text-zinc-500">Site / Instagram</label><input name="site" class="mt-2 w-full rounded-[12px] border border-white/10 bg-[#0A0A0A] px-4 py-3 text-[14px]" placeholder="buildpulse.com.br"></div>
+<button type="submit" class="w-full h-[48px] rounded-full bg-emerald-500 font-semibold text-black hover:bg-emerald-400 transition">Garantir meu diagnóstico gratuito →</button>
+<p class="text-center text-[11px] text-zinc-500">Seus dados estão seguros. Nada de spam. • LGPD</p>
+</form>
+</div>
+<div id="success" class="hidden py-12 text-center">
+<div class="mx-auto h-16 w-16 rounded-full bg-emerald-500/20 grid place-items-center">✓</div>
+<h3 class="mt-6 text-[22px] font-bold">Diagnóstico solicitado!</h3>
+<p class="mt-3 text-[14px] text-zinc-400">Recebemos seus dados. Nosso time vai te chamar no WhatsApp em até 2h úteis.</p>
+</div>
+</div>
+</section>
+
+<section class="relative z-10 mx-auto max-w-[1280px] px-6 py-16">
+<h2 class="text-[28px] md:text-[36px] font-bold tracking-tight">O tráfego não é seu problema.<br><span class="text-zinc-500">A falta de sistema é.</span></h2>
+<div class="mt-10 grid md:grid-cols-3 gap-6">
+<div class="rounded-[20px] border border-white/10 bg-[#111] p-6"><div class="h-10 w-10 rounded-full bg-red-500/10 grid place-items-center">✕</div><h4 class="mt-4 font-semibold">Leads que não compram</h4><p class="mt-2 text-[13px] text-zinc-400">Campanha gera curiosidade, não demanda qualificada. Seu time perde horas com quem nunca vai fechar.</p></div>
+<div class="rounded-[20px] border border-white/10 bg-[#111] p-6"><div class="h-10 w-10 rounded-full bg-yellow-500/10 grid place-items-center">!</div><h4 class="mt-4 font-semibold">Time que não fecha</h4><p class="mt-2 text-[13px] text-zinc-400">Sem playbook, sem CRM, sem acompanhamento. Cada vendedor vende de um jeito e o dono vira babá.</p></div>
+<div class="rounded-[20px] border border-white/10 bg-[#111] p-6"><div class="h-10 w-10 rounded-full bg-zinc-700 grid place-items-center">◎</div><h4 class="mt-4 font-semibold">Dono refém da operação</h4><p class="mt-2 text-[13px] text-zinc-400">Sem dados, sem previsibilidade. Você não sabe se o problema é no anúncio, na landing ou no comercial.</p></div>
+</div>
+</section>
+
+<footer class="relative z-10 border-t border-white/10 bg-black">
+<div class="mx-auto max-w-[1280px] px-6 py-12 text-[13px] text-zinc-500">
+<div class="flex flex-col md:flex-row justify-between gap-4">
+<span>© 2026 BuildPulse Comercial B2B • Joinville, SC • contato@buildpulse.com.br</span>
+<span><a href="/industria" class="hover:text-white underline">Página para Indústrias</a> • <a href="#" class="hover:text-white">Política de Privacidade</a></span>
+</div>
+</div>
+</footer>
+
+<script>
+document.getElementById('leadForm').addEventListener('submit', async (e)=>{
+ e.preventDefault();
+ const data = Object.fromEntries(new FormData(e.target).entries());
+ data.origem = 'buildpulse.com.br - LP Geral';
+ data.timestamp = new Date().toISOString();
+ const btn = e.target.querySelector('button'); btn.textContent='Enviando...'; btn.disabled=true;
+ try{
+   const r = await fetch('/api/lead', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data)});
+   if(!r.ok) throw new Error('fail');
+   document.getElementById('form-card').classList.add('hidden');
+   document.getElementById('success').classList.remove('hidden');
+ }catch(err){
+   alert('Erro ao enviar. Me chame no WhatsApp e já te mando o diagnóstico.');
+   btn.textContent='Garantir meu diagnóstico gratuito →'; btn.disabled=false;
+ }
+});
+</script>
+</body>
+</html>
