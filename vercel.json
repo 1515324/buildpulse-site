@@ -1,0 +1,25 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/lead",
+      "destination": "/api/lead.js"
+    },
+    {
+      "source": "/metodo",
+      "destination": "/metodo/index.html"
+    },
+    {
+      "source": "/industria",
+      "destination": "/industria/index.html"
+    },
+    {
+      "source": "/metodo/",
+      "destination": "/metodo/index.html"
+    },
+    {
+      "source": "/industria/",
+      "destination": "/industria/index.html"
+    }
+  ],
+  "cleanUrls": true
+}
