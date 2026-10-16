@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BuildPulse — Assessoria comercial para PMEs B2B</title>
+<meta name="description" content="Estruturamos o processo, geramos os leads, treinamos o time. Você fecha. Assessoria comercial para PMEs B2B com Google Ads, Meta Ads, prospecção ativa e CRM.">
+<link rel="canonical" href="https://buildpulse.com.br/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "BuildPulse",
+  "description": "Assessoria comercial para PMEs B2B: processo de vendas, geração de leads, treinamento do time e CRM.",
+  "areaServed": "BR"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Isso não é só mais um vendedor terceirizado?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Não. Um vendedor depende de uma pessoa. A BuildPulse entrega processo — CRM, script testado, metas e cadência — que continua funcionando mesmo se alguém do time muda."}
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto custa uma assessoria de vendas?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Depende do tamanho da operação. Os planos da BuildPulse partem de R$ 3.500/mês, sempre com um componente sobre a receita incremental gerada."}
+    },
+    {
+      "@type": "Question",
+      "name": "Já tenho um fornecedor ou time comercial. Por que mudar?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Colocar um segundo olhar na operação, mesmo sem trocar quem já está lá, costuma revelar espaço de melhoria mesmo quando o resultado atual já é bom."}
+    },
+    {
+      "@type": "Question",
+      "name": "Eu já anuncio no Google e no Meta. Isso substitui minha agência?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Não precisa substituir. O tráfego pago traz o lead até a porta — o que decide se ele vira contrato é o que acontece depois: qualificação, agendamento e condução da venda."}
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --void:#050608;
+    --deep:#080c10;
+    --surface:#0c1218;
+    --lift:#111820;
+    --edge:#1b2632;
+    --gold:#d4a843;
+    --green:#00e57a;
+    --signal:#2fd1ff;
+    --red:#ff3b3b;
+    --ink:#f0f4f8;
+    --dim:#8a96a2;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--void);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  ::selection{background:var(--gold);color:var(--void);}
+  :focus-visible{outline:2px solid var(--signal);outline-offset:3px;}
+
+  .wrap{max-width:920px;margin:0 auto;padding:0 22px;}
+
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-0.01em;margin:0;}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:14px;display:block;
+  }
+
+  /* ---------- STATUS STRIP (signature element) ---------- */
+  .status-strip{
+    background:var(--deep);
+    border-bottom:1px solid var(--edge);
+    overflow:hidden;
+    white-space:nowrap;
+  }
+  .status-track{
+    display:inline-flex;
+    padding:9px 0;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11.5px;
+    color:var(--dim);
+    animation:scrollstrip 22s linear infinite;
+  }
+  .status-track span{padding:0 26px;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;}
+  .status-track .dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);flex:none;}
+  .status-track .dot.c{background:var(--signal);box-shadow:0 0 6px var(--signal);}
+  .status-track b{color:var(--ink);font-weight:500;}
+  @keyframes scrollstrip{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding:64px 0 56px;
+    overflow:hidden;
+  }
+  .scan{
+    position:absolute;inset:0;
+    background:radial-gradient(ellipse at 50% -10%, rgba(47,209,255,.08), transparent 60%);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;max-width:640px;}
+  h1.hero-h1{
+    font-size:clamp(32px,7vw,46px);
+    line-height:1.06;
+    margin-bottom:18px;
+  }
+  h1.hero-h1 em{color:var(--gold);font-style:normal;}
+  .hero p{
+    font-size:16px;line-height:1.6;color:#c3cad2;
+    max-width:520px;margin:0 0 30px;
+  }
+  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;
+    padding:14px 22px;border-radius:8px;text-decoration:none;
+    border:1.5px solid transparent;cursor:pointer;
+  }
+  .btn-primary{background:var(--gold);color:#20160a;}
+  .btn-primary:hover{filter:brightness(1.08);}
+  .btn-ghost{border-color:var(--edge);color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--dim);}
+
+  .proof-row{
+    display:flex;gap:28px;flex-wrap:wrap;
+    padding-top:24px;border-top:1px solid var(--edge);
+  }
+  .proof-row div{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--dim);}
+  .proof-row b{display:block;font-family:'Space Grotesk',sans-serif;font-size:20px;color:var(--ink);font-weight:600;}
+
+  /* ---------- STATS ---------- */
+  .stats-grid{display:grid;gap:1px;background:var(--edge);border:1px solid var(--edge);border-radius:10px;overflow:hidden;grid-template-columns:1fr 1fr;}
+  .stat{background:var(--surface);padding:22px 18px;text-align:center;}
+  .stat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,5vw,32px);color:var(--gold);font-weight:700;margin-bottom:4px;}
+  .stat span{font-size:12px;color:var(--dim);line-height:1.4;display:block;}
+
+  /* ---------- FIT CHECK ---------- */
+  .fit-grid{display:grid;gap:16px;grid-template-columns:1fr;}
+  .fit-col{background:var(--surface);border:1px solid var(--edge);border-radius:10px;padding:22px;}
+  .fit-col h3{font-size:15px;margin-bottom:14px;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.06em;}
+  .fit-col.yes h3{color:var(--green);}
+  .fit-col.no h3{color:var(--dim);}
+  .fit-col ul{margin:0;padding:0;list-style:none;}
+  .fit-col li{display:flex;gap:10px;font-size:14px;color:#c3cad2;line-height:1.55;margin-bottom:12px;}
+  .fit-col li:last-child{margin-bottom:0;}
+  .fit-col li::before{flex:none;font-family:'JetBrains Mono',monospace;font-weight:600;}
+  .fit-col.yes li::before{content:'✓';color:var(--green);}
+  .fit-col.no li::before{content:'—';color:var(--dim);}
+
+  /* ---------- SECTIONS shared ---------- */
+  section{padding:56px 0;border-bottom:1px solid var(--edge);}
+  section.alt{background:var(--deep);}
+  h2.section-h2{font-size:clamp(24px,4.5vw,32px);margin-bottom:14px;max-width:560px;}
+  .section-sub{color:var(--dim);font-size:15px;max-width:520px;line-height:1.6;margin-bottom:36px;}
+
+  /* ---------- PROBLEMA ---------- */
+  .symptom-grid{display:grid;gap:16px;grid-template-columns:1fr;}
+  .symptom{
+    background:var(--surface);border:1px solid var(--edge);border-radius:10px;
+    padding:20px 20px 18px;
+  }
+  .symptom .tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--red);margin-bottom:8px;display:block;letter-spacing:.06em;}
+  .symptom h3{font-size:17px;margin-bottom:6px;}
+  .symptom p{color:var(--dim);font-size:14px;line-height:1.55;margin:0;}
+
+  /* ---------- SISTEMA / MÓDULOS ---------- */
+  .module-list{display:flex;flex-direction:column;gap:0;}
+  .module{
+    display:grid;grid-template-columns:auto 1fr;gap:16px;
+    padding:22px 0;border-top:1px solid var(--edge);
+  }
+  .module:first-child{border-top:none;}
+  .module-mark{
+    font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--signal);
+    padding-top:3px;
+  }
+  .module h3{font-size:18px;margin-bottom:6px;}
+  .module p{color:#b9c0c8;font-size:14.5px;line-height:1.6;margin:0;}
+
+  /* ---------- OBJEÇÕES (accordion) ---------- */
+  .qa{border-top:1px solid var(--edge);}
+  .qa-item{border-bottom:1px solid var(--edge);}
+  .qa-item summary{
+    list-style:none;cursor:pointer;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    padding:20px 0;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;
+  }
+  .qa-item summary::-webkit-details-marker{display:none;}
+  .qa-item summary::after{
+    content:'+';font-family:'JetBrains Mono',monospace;color:var(--gold);font-size:20px;flex:none;
+    transition:transform .15s;
+  }
+  .qa-item[open] summary::after{transform:rotate(45deg);}
+  .qa-item .a{color:#b9c0c8;font-size:14.5px;line-height:1.65;padding:0 0 22px;max-width:600px;}
+  .qa-item .a b{color:var(--ink);}
+
+  /* ---------- PLANOS ---------- */
+  .plans{display:grid;gap:16px;grid-template-columns:1fr;}
+  .plan{
+    background:var(--surface);border:1px solid var(--edge);border-radius:12px;
+    padding:24px;
+  }
+  .plan.featured{border-color:var(--gold);}
+  .plan-name{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:6px;}
+  .plan.featured .plan-name{color:var(--gold);}
+  .plan h3{font-size:20px;margin-bottom:10px;}
+  .plan .price{font-family:'Space Grotesk',sans-serif;font-size:15px;color:var(--dim);margin-bottom:16px;}
+  .plan .price b{color:var(--ink);font-size:22px;}
+  .plan ul{margin:0;padding:0 0 0 18px;color:#b9c0c8;font-size:13.5px;line-height:1.7;}
+
+  /* ---------- FORM (integrated) ---------- */
+  .form-card{
+    background:var(--lift);border:1px solid var(--edge);border-radius:14px;
+    padding:26px 22px 30px;
+  }
+  fieldset{border:none;margin:0 0 24px;padding:0;}
+  legend{
+    font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--dim);
+    text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px;padding:0;
+  }
+  label{display:block;font-size:14px;font-weight:600;margin:0 0 6px;color:var(--ink);}
+  .hint{font-size:12.5px;color:var(--dim);margin:-2px 0 8px;font-style:italic;}
+  .field{margin-bottom:16px;}
+  input[type=text],input[type=email],input[type=tel],select{
+    width:100%;padding:13px 14px;border:1.5px solid var(--edge);border-radius:8px;
+    font-size:15px;font-family:'Inter',sans-serif;background:var(--surface);color:var(--ink);
+  }
+  input::placeholder{font-family:'JetBrains Mono',monospace;color:#5c6570;font-size:13px;}
+  input:focus,select:focus{outline:none;border-color:var(--signal);box-shadow:0 0 0 3px rgba(47,209,255,.15);}
+  select{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238a96a2' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat;background-position:right 14px center;background-size:16px;}
+  .channels{display:flex;gap:10px;flex-wrap:wrap;}
+  .chip input{position:absolute;opacity:0;width:0;height:0;}
+  .chip{position:relative;}
+  .chip label{
+    display:flex;align-items:center;gap:8px;margin:0;font-size:13.5px;font-weight:500;
+    padding:10px 15px;border:1.5px solid var(--edge);border-radius:999px;cursor:pointer;background:var(--surface);
+  }
+  .chip input:checked + label{border-color:var(--signal);background:rgba(47,209,255,.08);color:var(--signal);}
+  button[type=submit]{
+    width:100%;padding:16px;border:none;border-radius:8px;background:var(--gold);color:#20160a;
+    font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;cursor:pointer;margin-top:4px;
+  }
+  button[type=submit]:hover{filter:brightness(1.08);}
+  .explainer{
+    background:var(--surface);border:1px solid var(--edge);border-left:3px solid var(--signal);
+    border-radius:8px;padding:16px 16px 14px;margin-bottom:24px;
+  }
+  .explainer-label{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;margin-bottom:6px;}
+  .explainer p{font-size:13px;color:var(--dim);margin:0 0 8px;line-height:1.55;}
+  .explainer ul{margin:0;padding-left:18px;font-size:13px;line-height:1.6;color:#b9c0c8;}
+  .explainer li{margin-bottom:6px;}
+  .explainer b{color:var(--ink);}
+
+  footer{padding:32px 0 48px;text-align:center;color:var(--dim);font-size:12px;}
+  footer a{text-decoration:underline;}
+  footer .switch{display:block;margin-bottom:14px;font-size:12.5px;}
+
+  /* ---------- SEGMENT NAV ---------- */
+  .segment-nav{background:var(--void);border-bottom:1px solid var(--edge);}
+  .segment-nav .wrap{display:flex;gap:8px;padding:12px 22px;overflow-x:auto;}
+  .segment-nav a{
+    flex:none;font-family:'JetBrains Mono',monospace;font-size:11.5px;
+    color:var(--dim);text-decoration:none;padding:6px 12px;border:1px solid var(--edge);border-radius:999px;
+    white-space:nowrap;
+  }
+  .segment-nav a:hover{color:var(--ink);border-color:var(--dim);}
+
+  @media(min-width:720px){
+    .symptom-grid{grid-template-columns:repeat(3,1fr);}
+    .plans{grid-template-columns:repeat(3,1fr);}
+    .hero-ctas .btn-ghost{order:2;}
+    .stats-grid{grid-template-columns:repeat(4,1fr);}
+    .fit-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .status-track{animation:none;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+  <div id="top"></div>
+<header style="position:sticky;top:0;z-index:9999;background:rgba(5,6,8,.98);backdrop-filter:blur(14px);border-bottom:1px solid #1b2632;height:68px;display:flex;align-items:center;padding:0 22px">
+<div style="max-width:1220px;margin:0 auto;width:100%;display:flex;justify-content:space-between;align-items:center">
+<a href="../index.html" onclick="if(location.pathname.endsWith('index.html')||location.pathname=='/'){event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})}" style="display:flex;gap:10px;align-items:center;color:#f0f4f8;font-family:Space Grotesk,sans-serif;font-weight:800;font-size:19px;text-decoration:none"><span style="width:34px;height:34px;background:#d4a843;color:#20160a;border-radius:8px;display:grid;place-items:center;font-weight:900">BP</span> BuildPulse</a>
+<nav style="display:flex;gap:22px;align-items:center;font-size:14.5px">
+<a href="./metodo/index.html" style="color:#8a96a2;text-decoration:none">Método PULSE</a>
+<a href="./industria/index.html" style="color:#8a96a2;text-decoration:none">Indústrias</a>
+<a href="./planos/index.html" style="color:#8a96a2;text-decoration:none">Planos</a>
+<a href="./blog/index.html" style="color:#8a96a2;text-decoration:none">Blog</a>
+<a href="./index.html#form" style="background:#d4a843;color:#20160a!important;padding:11px 18px;border-radius:9px;font-weight:700;text-decoration:none">Diagnóstico</a>
+</nav>
+</div></header>
+  <div class="status-strip">
+    <div class="status-track">
+      <span><span class="dot"></span>SDR · <b>ativo</b></span>
+      <span><span class="dot c"></span>CRM · <b>sincronizado</b></span>
+      <span><span class="dot c"></span>SINAL · <b>monitorando</b></span>
+      <span><span class="dot"></span>COMERCIAL · <b>em operação</b></span>
+      <span><span class="dot"></span>SDR · <b>ativo</b></span>
+      <span><span class="dot c"></span>CRM · <b>sincronizado</b></span>
+      <span><span class="dot c"></span>SINAL · <b>monitorando</b></span>
+      <span><span class="dot"></span>COMERCIAL · <b>em operação</b></span>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="scan"></div>
+    <div class="wrap hero-inner">
+      <span class="eyebrow">Assessoria comercial para PMEs B2B</span>
+      <h1 class="hero-h1" id="h1">Estruturamos o processo. Geramos os leads. Treinamos o time. <em>Você fecha.</em></h1>
+      <p id="hero-p">Você tem produto e vendedores. Falta um processo comercial que funcione sem depender de uma pessoa só. Montamos o funil e o CRM, trazemos leads qualificados com Google Ads, Meta Ads e prospecção ativa, e treinamos o seu time para fechar.</p>
+      <div class="hero-ctas">
+        <a href="#formulario" class="btn btn-primary">Quero um diagnóstico</a>
+        <a href="#objecoes" class="btn btn-ghost">Antes, tira minhas dúvidas</a>
+      </div>
+      <div class="proof-row">
+        <div><b>7 dias</b>para entrar no ar</div>
+        <div><b>100%</b>dos leads no CRM</div>
+        <div><b>1x/semana</b>pipeline com seu time</div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat"><b>7 dias</b><span>para campanhas e CRM entrarem no ar</span></div>
+        <div class="stat"><b>100%</b><span>dos leads registrados no CRM</span></div>
+        <div class="stat"><b>D+1 a D+30</b><span>cadência de follow-up em todo lead</span></div>
+        <div class="stat"><b>1x/semana</b><span>pipeline revisado junto com o seu time</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <span class="eyebrow">Pra quem é</span>
+      <h2 class="section-h2">Não é pra qualquer operação. E tá tudo bem.</h2>
+      <p class="section-sub">Isso funciona quando tem o que estruturar. Se ainda não é o seu momento, prefiro te dizer agora.</p>
+      <div class="fit-grid">
+        <div class="fit-col yes">
+          <h3>Faz sentido se</h3>
+          <ul>
+            <li>Você já gera receita e quer parar de depender de uma pessoa só pra vender</li>
+            <li>Tem verba pra investir em estrutura, não só em mais anúncio</li>
+            <li>Quer processo e CRM, não só "mais um vendedor"</li>
+            <li>Está disposto a mudar como o comercial funciona hoje</li>
+          </ul>
+        </div>
+        <div class="fit-col no">
+          <h3>Talvez não seja o momento se</h3>
+          <ul>
+            <li>Você busca resultado sem mexer em nada do processo atual</li>
+            <li>Ainda não tem faturamento recorrente pra sustentar a operação</li>
+            <li>Quer só "rodar anúncio" sem estrutura comercial atrás</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">O problema real</span>
+      <h2 class="section-h2">Sua empresa já gera oportunidade. O problema é o que acontece depois.</h2>
+      <p class="section-sub">Três sintomas que aparecem antes de qualquer conversa sobre preço.</p>
+      <div class="symptom-grid">
+        <div class="symptom">
+          <span class="tag">SINTOMA 01</span>
+          <h3>O lead esfria</h3>
+          <p>Chega contato, mas o retorno demora, e quem procurava resolver o problema hoje já resolveu com outro.</p>
+        </div>
+        <div class="symptom">
+          <span class="tag">SINTOMA 02</span>
+          <h3>Vendedor sem processo</h3>
+          <p>O resultado depende do dia do vendedor, não de um método. Quando ele sai, o conhecimento sai junto.</p>
+        </div>
+        <div class="symptom">
+          <span class="tag">SINTOMA 03</span>
+          <h3>Anúncio sem estrutura atrás</h3>
+          <p>O tráfego traz visita, mas sem processo comercial atrás, o investimento em mídia não vira contrato.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">Como funciona</span>
+      <h2 class="section-h2">Quatro etapas. A última é sua.</h2>
+      <p class="section-sub">A gente cuida do que trava o seu comercial. O fechamento continua com o seu time.</p>
+      <div class="module-list">
+        <div class="module">
+          <span class="module-mark">1</span>
+          <div>
+            <h3>Estruturamos o processo</h3>
+            <p>Diagnóstico do funil, script por etapa, playbook de objeções, CRM configurado e metas do time. Você sabe onde cada lead entra e onde ele se perde.</p>
+          </div>
+        </div>
+        <div class="module">
+          <span class="module-mark">2</span>
+          <div>
+            <h3>Geramos os leads</h3>
+            <p>Google Ads, Meta Ads e prospecção ativa, com SDR qualificando e agendando reunião direto na agenda de quem vende.</p>
+          </div>
+        </div>
+        <div class="module">
+          <span class="module-mark">3</span>
+          <div>
+            <h3>Treinamos o time</h3>
+            <p>Seus vendedores aprendem o script e as respostas às objeções, e o pipeline é revisado com eles toda semana.</p>
+          </div>
+        </div>
+        <div class="module">
+          <span class="module-mark">4</span>
+          <div>
+            <h3>Você fecha</h3>
+            <p>O contrato fica com o seu time. Nós acompanhamos o forecast e ajustamos o processo conforme os números.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="objecoes">
+    <div class="wrap">
+      <span class="eyebrow">Antes de fechar</span>
+      <h2 class="section-h2">As perguntas que todo mundo faz</h2>
+      <p class="section-sub">Sem enrolação — as mesmas dúvidas que aparecem em qualquer conversa de diagnóstico.</p>
+      <div class="qa">
+        <details class="qa-item" open>
+          <summary>Isso não é só mais um vendedor terceirizado?</summary>
+          <div class="a">Não. Um vendedor depende de uma pessoa. A BuildPulse entrega <b>processo</b> — CRM, script testado, metas e cadência — que continua funcionando mesmo se alguém do time muda. Não é receita de bolo genérica: entramos dentro da sua operação e estruturamos sob medida pro momento que vocês vivem hoje.</div>
+        </details>
+        <details class="qa-item">
+          <summary>Quanto custa?</summary>
+          <div class="a">Depende do tamanho da sua operação — por isso não jogamos um número solto. Os planos partem de <b>R$ 3.500/mês</b> (Pulse Starter) e sobem até o Elite, sempre com um componente sobre a receita incremental gerada. O diagnóstico inicial existe pra você sair com uma faixa certa, sem enrolação.</div>
+        </details>
+        <details class="qa-item">
+          <summary>Já tenho um fornecedor ou time comercial. Por que mudar?</summary>
+          <div class="a">Ótimo que já estão investindo nisso. A pergunta que vale fazer é: o resultado de hoje já é o ideal, ou ainda tem espaço pra melhorar? Muitas vezes vale colocar um segundo olhar na operação, mesmo sem trocar quem já está lá.</div>
+        </details>
+        <details class="qa-item">
+          <summary>Vou pensar — como decido com mais clareza?</summary>
+          <div class="a">Faz sentido pensar com calma. O que costuma ajudar é isolar o que exatamente está em dúvida: o investimento, o momento da empresa, ou se isso resolve a dor que vocês têm hoje. Cada resposta aponta pra um caminho diferente — e o diagnóstico gratuito existe justamente pra responder isso sem custo.</div>
+        </details>
+        <details class="qa-item">
+          <summary>Eu já anuncio no Google e no Meta. Isso substitui minha agência?</summary>
+          <div class="a">Não precisa substituir. O tráfego pago traz o lead até a porta — o que decide se ele vira contrato é o que acontece depois: qualificação, agendamento e condução da venda. É exatamente aí que a assessoria entra, seja complementando ou assumindo a mídia também.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="eyebrow">A esteira</span>
+      <h2 class="section-h2">Onde sua empresa entra hoje</h2>
+      <p class="section-sub">Três estágios — o investimento é definido no diagnóstico, de acordo com o tamanho da sua operação. Sem tabela genérica.</p>
+      <div class="plans">
+        <div class="plan">
+          <div class="plan-name">Pulse Starter</div>
+          <h3>Fundação</h3>
+          <div class="price">Pra quem está <b>estruturando</b> o comercial pela primeira vez</div>
+          <ul>
+            <li>Diagnóstico e estruturação do funil</li>
+            <li>CRM implementado</li>
+            <li>Script e cadência definidos</li>
+            <li>Tráfego pago em 1 canal: Meta Ads ou Google Ads</li>
+          </ul>
+        </div>
+        <div class="plan featured">
+          <div class="plan-name">Pulse Growth</div>
+          <h3>Escala</h3>
+          <div class="price">Pra quem já vende e quer <b>tirar o gargalo</b> do próprio time</div>
+          <ul>
+            <li>Tudo do Starter</li>
+            <li>SDR dedicado + prospecção ativa</li>
+            <li>Gestão comercial contínua</li>
+            <li>Meta Ads e Google Ads rodando juntos</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <div class="plan-name">Pulse Elite</div>
+          <h3>Motor completo</h3>
+          <div class="price">Pra quem quer o <b>sistema inteiro</b> rodando de ponta a ponta</div>
+          <ul>
+            <li>Tudo do Growth</li>
+            <li>Criativos de vídeo semanais para os anúncios</li>
+            <li>Gestão de reputação online e pré-venda B2B</li>
+          </ul>
+        </div>
+      </div>
+      <p class="section-sub" style="margin:22px 0 0;font-size:13.5px;">A verba de anúncios é paga direto ao Google e à Meta, e não está incluída nos valores dos planos. As faixas de investimento aparecem no formulário abaixo, pra você já ter uma referência antes da conversa.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="formulario">
+    <div class="wrap" style="max-width:640px;">
+      <span class="eyebrow">Comece pelo diagnóstico</span>
+      <h2 class="section-h2">Vamos entender sua operação</h2>
+      <p class="section-sub">20 minutos, sem custo. Você sai com uma faixa de investimento real e um plano do que fazer primeiro.</p>
+
+      <form class="form-card" onsubmit="handleSubmit(event)">
+        <input type="hidden" name="origem" value="mestre">
+
+        <div class="explainer">
+          <div class="explainer-label">O que é uma assessoria comercial?</div>
+          <p>Se você chegou até aqui por um anúncio, talvez esteja se perguntando isso. Em poucas palavras:</p>
+          <ul>
+            <li><b>Não vendemos anúncio.</b> Montamos o processo, geramos os leads e treinamos o time. Quem fecha é o seu time.</li>
+            <li><b>Você não contrata uma pessoa.</b> Contrata um processo com CRM, script e metas — que continua funcionando mesmo se um vendedor sai.</li>
+            <li><b>O anúncio é a porta de entrada.</b> Google e Meta trazem o lead; o que decide se ele compra é o que a assessoria estrutura depois.</li>
+          </ul>
+        </div>
+
+        <fieldset>
+          <legend>Seus dados</legend>
+          <div class="field">
+            <label for="nome">Qual o seu nome completo?</label>
+            <input type="text" id="nome" name="nome" required placeholder="Nome e sobrenome">
+          </div>
+          <div class="field">
+            <label for="email">Qual é o seu e-mail?</label>
+            <input type="email" id="email" name="email" required placeholder="voce@empresa.com.br">
+          </div>
+          <div class="field">
+            <label for="whatsapp">Qual o seu WhatsApp com DDD?</label>
+            <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(11) 91234-5678">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Sobre a empresa</legend>
+          <div class="field">
+            <label for="empresa">Qual o nome da sua empresa?</label>
+            <input type="text" id="empresa" name="empresa" required placeholder="Razão social ou nome fantasia">
+          </div>
+          <div class="field">
+            <label for="segmento">Qual o segmento da sua empresa?</label>
+            <select id="segmento" name="segmento" required>
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="saude">Clínicas e saúde</option>
+              <option value="planos-de-saude">Corretora de planos de saúde</option>
+              <option value="advocacia">Advocacia e jurídico</option>
+              <option value="varejo">Varejo e comércio</option>
+              <option value="solar">Energia solar e piscinas</option>
+              <option value="industria">Indústria e distribuição</option>
+              <option value="servicos-b2b">Serviços B2B</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="site">Site ou Instagram da empresa</label>
+            <input type="text" id="site" name="site" placeholder="@suaempresa ou www.suaempresa.com.br">
+          </div>
+          <div class="field">
+            <label for="cnpj">Qual o CNPJ da sua empresa?</label>
+            <input type="text" id="cnpj" name="cnpj" required placeholder="00.000.000/0000-00">
+          </div>
+          <div class="field">
+            <label for="faturamento">Qual o faturamento mensal total da sua empresa?</label>
+            <div class="hint">Somando todos os canais de venda</div>
+            <select id="faturamento" name="faturamento" required>
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option>Até R$ 50 mil</option>
+              <option>R$ 50 mil – R$ 150 mil</option>
+              <option>R$ 150 mil – R$ 500 mil</option>
+              <option>R$ 500 mil – R$ 1,5 milhão</option>
+              <option>Acima de R$ 1,5 milhão</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="ticket">Qual o ticket médio de venda da sua empresa?</label>
+            <input type="text" id="ticket" name="ticket" required placeholder="Ex: R$ 4.500">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Operação comercial hoje</legend>
+          <div class="field">
+            <label for="time">Sua empresa já tem um time comercial estruturado?</label>
+            <select id="time" name="time" required>
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option>Não tenho vendedor, sou eu quem vende</option>
+              <option>Tenho vendedor(es), mas sem processo definido</option>
+              <option>Tenho time comercial com processo, quero escalar</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Qual sua maior dificuldade comercial hoje?</label>
+            <div class="channels">
+              <div class="chip"><input type="checkbox" id="demanda" name="dificuldade" value="Gerar leads/demanda"><label for="demanda">Gerar leads</label></div>
+              <div class="chip"><input type="checkbox" id="conversao" name="dificuldade" value="Converter leads em venda"><label for="conversao">Converter em venda</label></div>
+              <div class="chip"><input type="checkbox" id="processo" name="dificuldade" value="Processo e gestão do time"><label for="processo">Gestão do time</label></div>
+              <div class="chip"><input type="checkbox" id="cobranca" name="dificuldade" value="Inadimplência/cobrança"><label for="cobranca">Inadimplência</label></div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="mensalidade">Quanto pode investir mensalmente em um sistema comercial completo?</label>
+            <div class="hint">Nossos contratos partem de R$ 3.500/mês + comissionamento sobre receita incremental</div>
+            <select id="mensalidade" name="mensalidade" required>
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option>Ainda não sei, quero entender o modelo</option>
+              <option>R$ 3.500 – R$ 5.500 (Pulse Starter)</option>
+              <option>R$ 5.500 – R$ 9.500 (Pulse Growth)</option>
+              <option>Acima de R$ 9.500 (Pulse Elite)</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <button type="submit">Quero meu diagnóstico gratuito</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    buildpulse · <a href="#">Política de Privacidade</a><br>
+    © 2026 BuildPulse — Todos os direitos reservados.
+  </footer>
+
+  <script>
+    // Uma página para todas as campanhas: ?seg=clinicas troca só o título e o subtítulo.
+    var SEG = {
+      clinicas:  ["Estruturamos o processo. Geramos os leads. Treinamos o time. <em>Você fecha.</em>", "Para clínicas com time de atendimento: leads de Google Ads e Meta Ads qualificados, follow-up em cadência e equipe treinada para converter avaliações em tratamento."],
+      advocacia: ["Estruturamos o processo. Geramos os leads. Treinamos o time. <em>Você fecha.</em>", "Para escritórios que vendem serviços: prospecção ativa, anúncios no Google e na Meta, CRM organizado e advogados treinados para conduzir a conversa comercial."],
+      saude:     ["Estruturamos o processo. Geramos os leads. Treinamos o time. <em>Você fecha.</em>", "Para quem vende plano de saúde: lead quente não pode esfriar. Cadência de follow-up em todo contato, CRM com 100% dos leads e time treinado."],
+      solar:     ["Estruturamos o processo. Geramos os leads. Treinamos o time. <em>Você fecha.</em>", "Para energia solar: qualificamos o lead antes de chegar ao vendedor, com anúncios no Google e na Meta e follow-up até a decisão."],
+      varejo:    ["Estruturamos o processo. Geramos os leads. Treinamos o time. <em>Você fecha.</em>", "Para varejo B2B: funil organizado, leads qualificados por anúncios e prospecção ativa, e vendedores com script e CRM."],
+      industria: ["Estruturamos o processo. Geramos os leads. Treinamos o time. <em>Você fecha.</em>", "Para indústria e distribuição: funil para decisão longa, retomada de cotações, prospecção de compradores e equipe treinada."]
+    };
+    var segParam = new URLSearchParams(location.search).get('seg');
+    var s = SEG[segParam];
+    var sel = document.getElementById('segmento');
+    if (sel && segParam) { var map={clinicas:'saude',saude:'planos-de-saude'}; var v=map[segParam]||segParam; for (var i=0;i<sel.options.length;i++){ if(sel.options[i].value===v){ sel.value=v; } } }
+    if (s) { document.getElementById('h1').innerHTML = s[0]; document.getElementById('hero-p').textContent = s[1]; }
+
+    function handleSubmit(e){
+      e.preventDefault();
+      var form = e.target;
+      var btn = form.querySelector('button[type=submit]');
+      var data = {};
+      new FormData(form).forEach(function(v,k){
+        data[k] = data[k] ? data[k] + ', ' + v : v;
+      });
+      data.pagina = location.pathname;
+      new URLSearchParams(location.search).forEach(function(v,k){ if(/^(utm_|seg$|gclid|fbclid)/.test(k)) data[k]=v; });
+      btn.disabled = true;
+      var label = btn.textContent;
+      btn.textContent = 'Enviando...';
+      fetch('/api/lead', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify(data)
+      }).then(function(r){
+        if(!r.ok) throw new Error('falha');
+        var baixo = data.faturamento === 'Até R$ 50 mil';
+        var msg = baixo
+          ? 'Nosso modelo faz mais sentido para empresas com time comercial e faturamento recorrente maior. Guardamos seu contato e avisamos se fizer sentido conversar.'
+          : 'Vamos entrar em contato pelo WhatsApp que você informou para agendar o diagnóstico.';
+        form.innerHTML = '<div role="status" style="padding:28px 8px;text-align:center"><h3 style="font-size:22px;margin-bottom:10px">Recebemos seus dados.</h3><p style="color:#c3cad2;line-height:1.6;margin:0">' + msg + '</p></div>';
+      }).catch(function(){
+        btn.disabled = false;
+        btn.textContent = label;
+        alert('Não foi possível enviar agora. Tente de novo em instantes.');
+      });
+    }
+  </script>
+
+</body>
+</html>
