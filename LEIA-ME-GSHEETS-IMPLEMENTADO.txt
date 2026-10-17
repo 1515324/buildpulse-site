@@ -1,0 +1,26 @@
+GOOGLE SHEETS JÁ IMPLEMENTADO - BUILDPULSE
+
+URL ATIVA:
+https://script.google.com/macros/s/AKfycbx_B6GZLHij5haU9EJF5qC_yNJwQWM-Nahw3GEbvWpMD2k0inuM8HqtmXdAUlUZtnVq/exec
+
+CÓDIGO JÁ ESTÁ NO INDEX.HTML:
+const URL_APPS_SCRIPT = 'https://script.google.com/macros/s/AKfycbx_B6GZLHij5haU9EJF5qC_yNJwQWM-Nahw3GEbvWpMD2k0inuM8HqtmXdAUlUZtnVq/exec';
+
+O QUE FOI FEITO:
+1. Formulário com onsubmit="return handleSubmit(event)"
+2. handleSubmit coleta: nome, email, whatsapp, empresa, site, cnpj, segmento, faturamento, ticket, time, dificuldade (checkboxes), mensalidade
+3. Envia para Google Sheets via fetch POST no-cors (grava na aba Leads)
+4. Backup para /api/lead do Vercel
+
+COMO TESTAR:
+1. Suba este ZIP no seu GitHub buildpulse-site
+2. Abra o site e faça um cadastro de teste
+3. Vá na planilha Google > aba Leads > deve aparecer em 5-10 segundos
+4. Se não aparecer, verifique:
+   - Apps Script > Implantar > Gerenciar implantações > Quem tem acesso: Qualquer pessoa
+   - Executar prepararPlanilha uma vez
+
+CAMPOS NA PLANILHA:
+Data do cadastro, Nome, E-mail, WhatsApp, Empresa, Site/Instagram, CNPJ, Segmento, Faturamento Mensal, Ticket Medio, Time Comercial, Dificuldade, Investimento Mensal, Origem, Status
+
+OBS: Como usa no-cors, não dá para confirmar via JS se gravou. A confirmação é ver a linha na planilha.
