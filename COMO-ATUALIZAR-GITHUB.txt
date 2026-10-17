@@ -1,0 +1,46 @@
+COMO ATUALIZAR NO GITHUB - BUILDPULSE
+
+PERGUNTA: Depois das alterações vou no GitHub deleto o que tem e cadastro esses novos? Isso?
+RESPOSTA: Sim! Faça assim:
+
+1. Vá no seu repositório GitHub: buildpulse-site (ou buildpulse)
+2. Clique em todos os arquivos > Delete (ou arraste)
+   - Pode usar: git rm -r . (se usar terminal)
+   - Ou pelo site: seleciona tudo e deleta
+3. Depois arraste TODOS os arquivos deste ZIP para dentro do GitHub
+   - index.html (principal - com Google Sheets implementado)
+   - blog/ (pasta com 20 artigos)
+   - sobre.html, privacidade.html, termos.html, contato.html
+   - sitemap.xml, robots.txt, ads.txt
+   - vercel.json, api/lead.js
+   - NÃO precisa subir Code.gs (esse é só para Google)
+
+4. Commit: "Atualiza site - Planos sem preço na cara + Google Sheets funcionando"
+5. Vercel vai fazer deploy automático em 1-2 min
+
+GOOGLE SHEETS NÃO ESTAVA FUNCIONANDO - AGORA VAI:
+Sua URL: https://script.google.com/macros/s/AKfycbx_B6GZLHij5haU9EJF5qC_yNJwQWM-Nahw3GEbvWpMD2k0inuM8HqtmXdAUlUZtnVq/exec
+PASSOS OBRIGATÓRIOS:
+a) Abra https://script.google.com
+b) Abra seu projeto BuildPulse Leads
+c) Cole o novo Code.gs deste ZIP (substitui o antigo)
+d) Clique em Executar > prepararPlanilha (autoriza)
+e) Implantar > Gerenciar implantações > Editar
+   - Quem tem acesso: Qualquer pessoa (IMPORTANTE!)
+   - Salva
+f) Teste: Abra seu site novo, faça cadastro teste
+g) Vá na planilha > aba Leads > deve aparecer em 10 segundos
+
+Se ainda não aparecer, me avise que vejo o log.
+
+PLANOS AGORA:
+- No SELECT: Mantém valores como você pediu:
+  Ainda não sei, quero entender o modelo
+  A partir de R$1.200/mês - Essencial
+  A partir de R$2.500/mês - Tração
+  A partir de R$4.000/mês - Escala
+  A partir de R$6.000/mês - Dominância
+
+- Na SEÇÃO PLANOS: Não mostra preço na cara:
+  "Quanto custa para organizar suas vendas
+  Não mostramos preço na cara. Google Ads, Meta Ads e CRM inclusos + recuperação de vendas perdidas. Valor só após diagnóstico."
