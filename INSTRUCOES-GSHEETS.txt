@@ -1,0 +1,7 @@
+INSTRUÇÕES GOOGLE SHEETS - BUILDPULSE
+1. Abra https://script.google.com > Novo projeto
+2. Cole Code.gs
+3. Executar > prepararPlanilha (autorize)
+4. Implantar > Nova implantação > Aplicativo da Web > Qualquer pessoa
+5. Copie URL e cole no index.html em GOOGLE_SHEETS_URL
+6. Todo lead vai para aba Leads com: Data, Nome, E-mail, WhatsApp, Empresa, Site, CNPJ, Segmento, Faturamento, Ticket, Time, Dificuldade, Investimento, Origem, Status
